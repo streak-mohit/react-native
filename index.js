@@ -455,14 +455,12 @@ module.exports = {
     );
   },
   get ViewPropTypes(): $FlowFixMe {
-    invariant(
-      false,
-      'ViewPropTypes has been removed from React Native, along with all ' +
-        'other PropTypes. We recommend that you migrate away from PropTypes ' +
-        'and switch to a type system like TypeScript. If you need to ' +
-        'continue using ViewPropTypes, migrate to the ' +
-        "'deprecated-react-native-prop-types' package.",
-    );
+    // invariant(
+    //   false,
+    //   'ViewPropTypes has been removed from React Native. Migrate to ' +
+    //     "ViewPropTypes exported from 'deprecated-react-native-prop-types'.",
+    // );
+    return require('deprecated-react-native-prop-types').ViewPropTypes;
   },
 };
 
